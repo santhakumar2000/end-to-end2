@@ -40,7 +40,7 @@ jobs:
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Building Docker Image
       run: |
-        docker build . --file Dockerfile --tag santhakumardadala/churnmode-2
+        docker build . --file Dockerfile --tag santhakumardadala/churnmodel-2
     - name: Pushing docker image
       run: |
         docker push ${{secrets.DOCKER_USERNAME}}/churnmodel
