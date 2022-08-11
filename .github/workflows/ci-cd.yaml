@@ -43,7 +43,7 @@ jobs:
         docker build . --file Dockerfile --tag santhakumardadala/churnmodel-2
     - name: Pushing docker image
       run: |
-        docker push ${{secrets.DOCKER_USERNAME}}/churnmodel
+        docker push ${{secrets.DOCKER_USERNAME}}/churnmodel-2
     # - name: Deploy to Heroku
     #   env:
     #     HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
