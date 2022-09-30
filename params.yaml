@@ -28,7 +28,7 @@ random_forest:
 model_dir: models/model.joblib
 
 model_webapp_dir: webapp/model_webapp_dir/model.joblib
-
+model_webapp_dir1: webapp/model_webapp_dir/model1.joblib
 model_monitor:
   target_col_name: target
   monitor_dashboard_html: reports/data_and_target_drift_dashboard.html

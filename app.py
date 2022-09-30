@@ -23,11 +23,36 @@ def read_params(config_path):
     return config
 
 def predict(data):
+
+    d = data[0]
+
+    print(sum(d))
+
     config = read_params(params_path)
+
     model_dir_path = config["model_webapp_dir"]
-    model = joblib.load(model_dir_path)
-    prediction = model.predict(data).tolist()[0]
-    return prediction 
+
+    model_dir_path1 = config["model_webapp_dir1"]
+
+    if sum(d) <= 30 :
+
+        print("model1")
+
+        model = joblib.load(model_dir_path)
+
+        prediction = model.predict(data).tolist()[0]
+
+    else:
+
+        print("model2")
+
+        model = joblib.load(model_dir_path1)
+
+        prediction = model.predict(data).tolist()[0]
+
+   
+
+    return prediction
 
 def validate_input(dict_request):
     for _, val in dict_request.items():
