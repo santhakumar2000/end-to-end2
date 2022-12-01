@@ -44,3 +44,6 @@ if __name__ == "__main__":
     args.add_argument("--config", default="params.yaml")
     parsed_args = args.parse_args()
     load_raw_data(config_path=parsed_args.config)
+
+
+    "nooo"
