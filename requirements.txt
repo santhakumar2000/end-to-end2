@@ -16,4 +16,5 @@ joblib
 tox
 pytest
 sklearn
-importlib-metadata 
+importlib-metadata>=1.6 
+
