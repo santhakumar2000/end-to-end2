@@ -16,3 +16,4 @@ joblib
 tox
 pytest
 sklearn
+importlib-metadata 
