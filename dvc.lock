@@ -54,7 +54,7 @@ stages:
     params:
       params.yaml:
         random_forest.max_depth: 30
-        random_forest.n_estimators: 60
+        random_forest.n_estimators: 50
     outs:
     - path: models/model.joblib
       md5: 8f3e86adcd71a5ca8b91863a003ad7a5
