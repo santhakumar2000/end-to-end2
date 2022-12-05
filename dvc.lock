@@ -4,15 +4,15 @@ stages:
     cmd: python src/data/load_data.py --config=params.yaml
     deps:
     - path: data/external/train.csv
-      md5: 8929517566f004183dff480fdd48afe0
-      size: 391872
+      md5: 16e503fb6ae5386999e6516837142c8c
+      size: 391594
     - path: src/data/load_data.py
-      md5: 789d7d6885a3ad22d65ba0828eb83936
-      size: 1460
+      md5: fed3831c571820aed100cdcc45e345c3
+      size: 1470
     outs:
     - path: data/raw/train.csv
-      md5: 9b61c38a459d36244dbf8e6940236371
-      size: 120397
+      md5: 1e7b7ca271058337868449f924995c51
+      size: 120311
   split_data:
     cmd: python src/data/split_data.py --config=params.yaml
     deps:
