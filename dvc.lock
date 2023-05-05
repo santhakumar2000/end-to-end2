@@ -17,18 +17,18 @@ stages:
     cmd: python src/data/split_data.py --config=params.yaml
     deps:
     - path: data/raw/train.csv
-      md5: 9b61c38a459d36244dbf8e6940236371
-      size: 120397
+      md5: 1e7b7ca271058337868449f924995c51
+      size: 120311
     - path: src/data/split_data.py
       md5: f492806a9c87e159595be5d396acfac1
       size: 1398
     outs:
     - path: data/processed/churn_test.csv
-      md5: c3a4965f71511e72d4af9ac650f47505
-      size: 24209
+      md5: 31d81353fe1ae6183de407acddcb9df4
+      size: 24182
     - path: data/processed/churn_train.csv
-      md5: 8358e3ab11f8301c58d3b0e5aa99a6fd
-      size: 96317
+      md5: 38fd3727668dd0d25b5faab0c8627457
+      size: 96258
   model_train:
     cmd: python src/models/train_model.py --config=params.yaml
     deps:
@@ -53,9 +53,9 @@ stages:
       size: 1732
     params:
       params.yaml:
-        random_forest.max_depth: 30
+        random_forest.max_depth: 20
         random_forest.n_estimators: 50
     outs:
     - path: models/model.joblib
-      md5: 8f3e86adcd71a5ca8b91863a003ad7a5
+      md5: 193f138ff15982ead215adf919c60848
       size: 659691
